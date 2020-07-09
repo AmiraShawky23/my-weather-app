@@ -3,6 +3,6 @@ import weatherReducer from './slicer'
 
 export default configureStore({
   reducer: {
-    counter: weatherReducer,
+    weather: weatherReducer,
   },
 });

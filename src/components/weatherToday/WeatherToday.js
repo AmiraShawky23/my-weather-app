@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CloudSun from "../icons/CloudSun";
+import WeatherIcon from './WeatherIcon'
 import Arrow from '../icons/Arrow';
 import { ReactComponent as Icon } from "../../assets/images/map-marker-alt-solid.svg";
 
@@ -107,68 +107,110 @@ const Item = styled.div`
 `;
 const H2 = styled.h2`
 `;
+const Loading = styled.h1`
+  font-size: 3rem;
+  text-align: center;
+  color: ${({theme}) => theme.text};
+  margin: 1.2rem auto;
+`;
+
+
+function getDayOfWeek(date) {
+    const dayOfWeek = new Date(date).getDay();    
+    return isNaN(dayOfWeek) ? null : 
+      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
+}
+
+function tConvert (time) {
+    // Check correct time format and split into components
+    time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+  
+    if (time.length > 1) { // If time format correct
+      time = time.slice (1);  // Remove full string match value
+      time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+      time[0] = +time[0] % 12 || 12; // Adjust hours
+    }
+    return time.join (''); // return adjusted time or original string
+  }
 
 const WeatherToday = (props) => {
-    // console.log(props.weather[0].list[0] )
-  return (
-    <WeatherTodayStyle>
-      <H3>
-        <Icon />
-        {/* {
-            props.weather[0].city.name
-        }
-        / {
-            props.weather[0].city.country
-        } */}
-      </H3>
-      {/* {console.log(temp.current.weather[0].main)} */}
-      <All>
-        <Weather>
-            <CloudSunStyle>
-                <CloudSun />
-                <P>
-                    {
-                        // props.weather[0]
-                    }
-                </P>
-            </CloudSunStyle>
-            <TempratureContainer>
-            <H1>22.23 °C</H1>
-            <MinMax>
-                <Max>
-                    <Arrow color={props.dark ? '#eff1f2' : '#09203f'}/>
-                    <p>
-                        {/* Max */}
-                        27°C
-                    </p>
-                </Max>
-                <Min>
-                    <Arrow color={props.dark ? '#eff1f2' : '#09203f'}/>
-                    <p>
-                        {/* Min */}
-                        12°C
-                    </p>
-                </Min>
-            </MinMax>
-            </TempratureContainer>
-        </Weather>
-        <More>
-            <H2>
-                Tuesday 11:00 PM
-            </H2>
-            <Item>
-                Precipitation: 7%
-            </Item>
-            <Item>
-                Humidity: 7%
-            </Item>
-            <Item>
-                Wind: 7km/h
-            </Item>
-        </More>
-      </All>
-    </WeatherTodayStyle>
-  );
+    if(props.weather.list) {
+        const temp = props.weather.list[0].dt_txt.split(" ");
+        const itemDay = temp[0];
+        const itemDate = tConvert(temp[1]);
+
+
+        return (
+            <WeatherTodayStyle>
+            <H3>
+                <Icon />
+                {
+                    props.weather.city.name
+                }
+            </H3>
+            <All>
+                <Weather>
+                    <CloudSunStyle>
+                        <WeatherIcon icon={props.weather.list[0].weather[0].icon} />
+                        <P>
+                            {
+                                props.weather.list[0].weather[0].description
+                            }
+                        </P>
+                    </CloudSunStyle>
+                    <TempratureContainer>
+                    <H1>
+                        {
+                            props.weather.list[0].main.temp
+                        }
+                        &nbsp; °C
+                    </H1>
+                    <MinMax>
+                        <Max>
+                            <Arrow color={props.dark ? '#eff1f2' : '#09203f'}/>
+                            <p>
+                                {
+                                    props.weather.list[0].main.temp_max
+                                }
+                                &nbsp; °C
+                            </p>
+                        </Max>
+                        <Min>
+                            <Arrow color={props.dark ? '#eff1f2' : '#09203f'}/>
+                            <p>
+                                {
+                                    props.weather.list[0].main.temp_min
+                                }
+                                &nbsp; °C
+                            </p>
+                        </Min>
+                    </MinMax>
+                    </TempratureContainer>
+                </Weather>
+                <More>
+                    <H2>
+                        {getDayOfWeek(itemDay)} {itemDate}
+                    </H2>
+                    <Item>
+                        Humidity: {props.weather.list[0].main.humidity}%
+                    </Item>
+                    <Item>
+                        Clouds: {props.weather.list[0].clouds.all}%
+                    </Item>
+                    <Item>
+                        Wind: {props.weather.list[0].wind.speed}km/h
+                    </Item>
+                </More>
+            </All>
+            </WeatherTodayStyle>
+        )
+    }else {
+        return(
+            <Loading>
+                loading...
+            </Loading>
+        )
+    }
 };
 
 export default WeatherToday;

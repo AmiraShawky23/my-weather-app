@@ -9,27 +9,27 @@ const CloudSunThunder = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_ddii)">
+      <g filter="url(#filter13_ddii)">
         <path
           d="M165.447 18C130.339 18 101.894 46.48 101.894 81.631C101.894 116.782 130.339 145.262 165.447 145.262C200.555 145.262 229 116.782 229 81.631C229 46.48 200.555 18 165.447 18Z"
-          fill="url(#paint0_radial)"
+          fill="url(#paint13_radial)"
         />
       </g>
-      <g filter="url(#filter1_d)">
+      <g filter="url(#filter14_d)">
         <path
           d="M175.929 101.129C177.217 97.7563 177.94 94.0685 177.94 90.2231C177.94 73.5176 164.428 59.9641 147.774 59.9641C141.584 59.9641 135.802 61.8553 131.026 65.0703C122.322 49.9408 106.076 39.7914 87.4424 39.7914C59.6646 39.7914 37.1659 62.3596 37.1659 90.2231C37.1659 91.0741 37.1973 91.9251 37.2287 92.7762C19.632 98.9856 7 115.817 7 135.612C7 160.67 27.2677 181 52.2488 181H167.885C190.101 181 208.106 162.939 208.106 140.655C208.106 121.144 194.28 104.848 175.929 101.129Z"
-          fill="url(#paint1_linear)"
+          fill="url(#paint14_linear)"
         />
       </g>
-      <g filter="url(#filter2_d)">
+      <g filter="url(#filter15_d)">
         <path
           d="M124.947 188.453L105.944 180.588L121.805 162.117C123.5 159.886 122.628 156.633 120.043 155.563L96.3299 145.749C94.3538 144.931 92.0676 145.702 90.9931 147.552L69.3676 184.893C68.0733 187.135 69.0453 190.006 71.4331 190.994L90.9797 199.083L70.1331 227.971C68.5044 230.228 69.4401 233.374 71.9596 234.416C73.3428 234.989 74.9601 234.809 76.2026 233.858L125.903 195.792C128.518 193.807 127.994 189.714 124.947 188.453Z"
-          fill="url(#paint2_linear)"
+          fill="url(#paint15_linear)"
         />
       </g>
       <defs>
         <filter
-          id="filter0_ddii"
+          id="filter13_ddii"
           x="78.894"
           y="0"
           width="187.106"
@@ -110,7 +110,7 @@ const CloudSunThunder = () => {
           />
         </filter>
         <filter
-          id="filter1_d"
+          id="filter14_d"
           x="0"
           y="33.7914"
           width="221.106"
@@ -143,7 +143,7 @@ const CloudSunThunder = () => {
           />
         </filter>
         <filter
-          id="filter2_d"
+          id="filter15_d"
           x="61.7915"
           y="139.424"
           width="78.7924"
@@ -176,7 +176,7 @@ const CloudSunThunder = () => {
           />
         </filter>
         <radialGradient
-          id="paint0_radial"
+          id="paint13_radial"
           cx="0"
           cy="0"
           r="1"
@@ -187,7 +187,7 @@ const CloudSunThunder = () => {
           <stop offset="1" stopColor="#FF7F0A" />
         </radialGradient>
         <linearGradient
-          id="paint1_linear"
+          id="paint14_linear"
           x1="38.2657"
           y1="70.5232"
           x2="165.707"
@@ -198,7 +198,7 @@ const CloudSunThunder = () => {
           <stop offset="1" stopColor="#FDFFFF" />
         </linearGradient>
         <linearGradient
-          id="paint2_linear"
+          id="paint15_linear"
           x1="89.5"
           y1="142"
           x2="130.584"

@@ -9,16 +9,41 @@ const DaysStyle = styled.div`
     grid-gap: 0.7rem;
 `;
 
-const Days = () => {
-    return(
-        <DaysStyle>
-            <Day />
-            <Day />
-            <Day />
-            <Day />
-            <Day />
-        </DaysStyle>
-    )
+const Days = (props) => {
+    if(props.list) {
+        /*
+        get first element date then
+            filter list by date
+        */
+       const temp = props.list[0].dt_txt.split(" ");
+       const firstItemDate = temp[1];
+
+       const res = props.list.filter(item => {
+           const temp1 = item.dt_txt.split(" ");
+           const date = temp1[1];
+
+           return date === firstItemDate;
+        });
+
+    /*
+        map 3la list and send list item
+    */
+        return(
+            <DaysStyle>
+                {
+                    res.map(item => {
+                        return(
+                            <Day key={item.dt} tempreture={item}/>
+                        )
+                    })
+                }
+            </DaysStyle>
+        )
+    }else {
+        return(
+            <div></div>
+        )
+    }
 }
 
 export default Days;

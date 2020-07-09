@@ -9,21 +9,21 @@ const CloudSun = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_ddii)">
+      <g filter="url(#filter8_ddii)">
         <path
           d="M218.198 18C171.402 18 133.487 55.9151 133.487 102.711C133.487 149.507 171.402 187.422 218.198 187.422C264.994 187.422 302.909 149.507 302.909 102.711C302.909 55.9151 264.994 18 218.198 18Z"
-          fill="url(#paint0_radial)"
+          fill="url(#paint8_radial)"
         />
       </g>
-      <g filter="url(#filter1_d)">
+      <g filter="url(#filter9_d)">
         <path
           d="M232.169 128.669C233.887 124.179 234.85 119.269 234.85 114.15C234.85 91.9099 216.84 73.8663 194.641 73.8663C186.39 73.8663 178.683 76.384 172.317 80.6641C160.715 60.5224 139.061 47.0107 114.224 47.0107C77.1979 47.0107 47.2088 77.0554 47.2088 114.15C47.2088 115.283 47.2507 116.416 47.2926 117.549C23.8374 125.815 7 148.223 7 174.575C7 207.935 34.0153 235 67.3132 235H221.447C251.059 235 275.059 210.956 275.059 181.289C275.059 155.314 256.63 133.62 232.169 128.669Z"
-          fill="url(#paint1_linear)"
+          fill="url(#paint9_linear)"
         />
       </g>
       <defs>
         <filter
-          id="filter0_ddii"
+          id="filter8_ddii"
           x="110.487"
           y="0"
           width="229.422"
@@ -104,7 +104,7 @@ const CloudSun = () => {
           />
         </filter>
         <filter
-          id="filter1_d"
+          id="filter9_d"
           x="0"
           y="41.0107"
           width="288.059"
@@ -137,7 +137,7 @@ const CloudSun = () => {
           />
         </filter>
         <radialGradient
-          id="paint0_radial"
+          id="paint8_radial"
           cx="0"
           cy="0"
           r="1"
@@ -148,7 +148,7 @@ const CloudSun = () => {
           <stop offset="1" stopColor="#FF7F0A" />
         </radialGradient>
         <linearGradient
-          id="paint1_linear"
+          id="paint9_linear"
           x1="48.6748"
           y1="87.9235"
           x2="218.366"

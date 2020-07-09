@@ -34,10 +34,10 @@ const weatherSlice = createSlice({
     return async dispatch => {
       dispatch(getWeather())
       try {
-        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6acc0fc91b684ffbbaf233902200307&q=${city}&days=5`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=6bc8fb3103e67c3661712ad7a233728a&units=metric`);
         const data = await response.json();
-
-        dispatch(getWeatherSuccess(JSON.stringify(data)));
+        
+        dispatch(getWeatherSuccess(data));
       } catch (error) {
         dispatch(getWeatherFailure());
       }

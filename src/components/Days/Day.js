@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import CloudMoon from '../icons/CloudMoon';
+import WeatherIcon from '../weatherToday/WeatherIcon';
 
 const DayStyles = styled.div`
     min-width: 17%;
@@ -29,13 +30,21 @@ const H4 = styled.h4`
     text-transform: uppercase;
 `;
 
+function getDayOfWeek(date) {
+    const dayOfWeek = new Date(date).getDay();    
+    return isNaN(dayOfWeek) ? null : 
+      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
+}
 
-const Day = () => {
+const Day = (props) => {
+    const temp = props.tempreture.dt_txt.split(" ");
+    const itemDay = temp[0];
+
     return(
         <DayStyles>
-            <H4>Sunday</H4>
-            <CloudMoon />
-            <P>22°C sunny cloudy</P>
+            <H4>{getDayOfWeek(itemDay)}</H4>
+            <WeatherIcon icon={props.tempreture.weather[0].icon}/>
+            <P>{props.tempreture.main.temp} °C {props.tempreture.weather[0].description}</P>
         </DayStyles>
     )
 }

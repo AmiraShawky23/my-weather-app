@@ -3,11 +3,11 @@ import React from 'react'
 const Sun = () => {
     return(
         <svg width="277" height="277" viewBox="0 0 277 277" fill="none" >
-            <g filter="url(#filter0_ddii)">
-                <path d="M131.5 18C71.5625 18 23 66.5625 23 126.5C23 186.438 71.5625 235 131.5 235C191.438 235 240 186.438 240 126.5C240 66.5625 191.438 18 131.5 18Z" fill="url(#paint0_radial)"/>
+            <g filter="url(#filter24_ddii)">
+                <path d="M131.5 18C71.5625 18 23 66.5625 23 126.5C23 186.438 71.5625 235 131.5 235C191.438 235 240 186.438 240 126.5C240 66.5625 191.438 18 131.5 18Z" fill="url(#paint30_radial)"/>
             </g>
             <defs>
-                <filter id="filter0_ddii" x="0" y="0" width="277" height="277" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <filter id="filter24_ddii" x="0" y="0" width="277" height="277" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                     <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                     <feOffset dx="7" dy="12"/>
@@ -33,7 +33,7 @@ const Sun = () => {
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
                     <feBlend mode="normal" in2="effect3_innerShadow" result="effect4_innerShadow"/>
                 </filter>
-                <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(131.5 126.5) rotate(90) scale(177.11 181.182)">
+                <radialGradient id="paint30_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(131.5 126.5) rotate(90) scale(177.11 181.182)">
                     <stop stopColor="#FCFF7E"/>
                     <stop offset="1" stopColor="#FF7F0A"/>
                 </radialGradient>

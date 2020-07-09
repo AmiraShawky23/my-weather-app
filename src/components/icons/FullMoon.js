@@ -9,15 +9,15 @@ const FullMoon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_ddii)">
+      <g filter="url(#filter18_ddii)">
         <path
           d="M131.5 18C71.5625 18 23 66.5625 23 126.5C23 186.438 71.5625 235 131.5 235C191.438 235 240 186.438 240 126.5C240 66.5625 191.438 18 131.5 18Z"
-          fill="url(#paint0_radial)"
+          fill="url(#paint18_radial)"
         />
       </g>
       <defs>
         <filter
-          id="filter0_ddii"
+          id="filter18_ddii"
           x="0"
           y="0"
           width="277"
@@ -98,7 +98,7 @@ const FullMoon = () => {
           />
         </filter>
         <radialGradient
-          id="paint0_radial"
+          id="paint18_radial"
           cx="0"
           cy="0"
           r="1"
