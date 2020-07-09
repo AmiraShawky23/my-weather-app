@@ -139,7 +139,6 @@ const WeatherToday = (props) => {
         const itemDay = temp[0];
         const itemDate = tConvert(temp[1]);
 
-
         return (
             <WeatherTodayStyle>
             <H3>

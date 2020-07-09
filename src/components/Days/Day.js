@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import CloudMoon from '../icons/CloudMoon';
 import WeatherIcon from '../weatherToday/WeatherIcon';
 
 const DayStyles = styled.div`
