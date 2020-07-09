@@ -80,10 +80,11 @@ function App() {
   const searchHandle = (value) => {
     setDidSearch(true);
     dispatch(fetchWeather(value));
+    console.log(weather.weather.city.name)
   }
   useEffect(() => {
     if(!didSearch) dispatch(fetchWeather('london'));
-  }, [weather, didSearch, dispatch]);
+  }, [ didSearch, dispatch]);
 
   const handleToggleClick = () => {
     setDarkMode((prevMode) => !prevMode);

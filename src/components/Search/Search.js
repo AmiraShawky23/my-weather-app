@@ -38,6 +38,9 @@ const Input = styled.input`
     height: 100%;
     border: none;
     background: transparent;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: ${({ theme }) => theme.text};
     
     &:focus {
         border: none;
@@ -45,6 +48,8 @@ const Input = styled.input`
     }
     &::placeholder {
         color: #aaa;
+        letter-spacing: initial;
+        font-weight: initial;
     }
 `
 
